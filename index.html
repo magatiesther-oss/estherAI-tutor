@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>EstherAI - Chemistry & Biology Tutor</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="brand">Esther<span>AI</span></div>
+    <div class="tagline">Learn. Practise. Improve.</div>
+  </header>
+
+  <main class="container">
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+
+      <p class="eyebrow">ESTHERMAGATITHETUTOR</p>
+
+      <h1>Your AI Chemistry & Biology Tutor</h1>
+
+      <p class="intro">
+        Ask questions, practise quizzes and build confidence
+        in Chemistry and Biology.
+      </p>
+
+      <button class="primary" onclick="showTutor()">
+        🤖 Ask EstherAI
+      </button>
+
+    </section>
+
+
+    <!-- SUBJECT CARDS -->
+    <section class="cards">
+
+      <button class="card" onclick="setSubject('Chemistry'); showTutor()">
+        <span class="icon">🧪</span>
+        <strong>Chemistry</strong>
+        <small>Concepts & questions</small>
+      </button>
+
+      <button class="card" onclick="setSubject('Biology'); showTutor()">
+        <span class="icon">🧬</span>
+        <strong>Biology</strong>
+        <small>Topics & explanations</small>
+      </button>
+
+      <button class="card" onclick="showQuiz()">
+        <span class="icon">📝</span>
+        <strong>Daily Quiz</strong>
+        <small>Test yourself</small>
+      </button>
+
+      <button class="card premium" onclick="showPremium()">
+        <span class="icon">👑</span>
+        <strong>Premium</strong>
+        <small>More revision tools</small>
+      </button>
+
+    </section>
+
+
+    <!-- AI TUTOR -->
+    <section id="tutor" class="panel hidden">
+
+      <div class="panel-head">
+
+        <div>
+          <p class="eyebrow">AI TUTOR</p>
+          <h2>Ask EstherAI</h2>
+        </div>
+
+        <button class="back" onclick="goHome()">Home</button>
+
+      </div>
+
+
+      <label for="subject">Subject</label>
+
+      <select id="subject">
+
+        <option>Chemistry</option>
+        <option>Biology</option>
+
+      </select>
+
+
+      <label for="question">Your question</label>
+
+      <textarea
+        id="question"
+        rows="5"
+        placeholder="Example: What happens when an acid reacts with a base?"
+      ></textarea>
+
+
+      <button class="primary full" onclick="askDemo()" id="askBtn">
+        Ask EstherAI
+      </button>
+
+
+      <div id="answer" class="answer hidden"></div>
+
+      <p class="note">
+        Powered by OpenAI • Real AI responses
+      </p>
+
+    </section>
+
+
+    <!-- DAILY QUIZ -->
+    <section id="quiz" class="panel hidden">
+
+      <div class="panel-head">
+
+        <h2>📝 Daily Quiz</h2>
+
+        <button class="back" onclick="goHome()">Home</button>
+
+      </div>
+
+
+      <p>
+        <strong>
+          What happens when an acid reacts with a base?
+        </strong>
+      </p>
+
+
+      <div class="options">
+
+        <button onclick="quizAnswer(this, true)">
+          A. Neutralisation
+        </button>
+
+        <button onclick="quizAnswer(this, false)">
+          B. Combustion
+        </button>
+
+        <button onclick="quizAnswer(this, false)">
+          C. Evaporation
+        </button>
+
+        <button onclick="quizAnswer(this, false)">
+          D. Freezing
+        </button>
+
+      </div>
+
+
+      <div id="quizResult"></div>
+
+    </section>
+
+
+    <!-- PREMIUM -->
+    <section id="premium" class="panel hidden">
+
+      <div class="panel-head">
+
+        <h2>👑 Premium</h2>
+
+        <button class="back" onclick="goHome()">Home</button>
+
+      </div>
+
+
+      <p>
+        Premium will unlock deeper revision resources and extra practice.
+      </p>
+
+
+      <ul>
+
+        <li>Full Chemistry & Biology revision</li>
+
+        <li>More quizzes and practice tests</li>
+
+        <li>Detailed worked solutions</li>
+
+        <li>AI study plans</li>
+
+        <li>Exclusive EstherMagatiTheTutor materials</li>
+
+      </ul>
+
+
+      <button
+        class="primary"
+        onclick="alert('Premium payments will be added later.')"
+      >
+        View Premium Plans
+      </button>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    © 2026 EstherAI · By EstherMagatiTheTutor
+  </footer>
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>
